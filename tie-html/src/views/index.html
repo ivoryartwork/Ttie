@@ -1,0 +1,38 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="tie">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--<link rel="manifest" href="../../site.webmanifest">-->
+    <!--<link rel="apple-touch-icon" href="../../icon.png">-->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.min.css?v={{MAIN_VERSION}}">
+    <style>
+        .container {
+            width: 200px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+</div>
+<div id="tool">
+    <button class="btn btn-default" onclick="addDiv()">div</button>
+</div>
+<script src="lib/jquery-{{JQUERY_VERSION}}.min.js"></script>
+<script src="lib/bootstrap/bootstrap.min.js"></script>
+<script src="js/main.min.js?v={{MAIN_VERSION}}"></script>
+<script>
+    function addDiv() {
+        $(".container").append('<div>test</div>');
+    }
+</script>
+</body>
+</html>
