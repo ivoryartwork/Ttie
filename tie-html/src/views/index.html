@@ -13,25 +13,33 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.min.css?v={{MAIN_VERSION}}">
     <style>
-        .container {
-            width: 200px;
-            height: 300px;
+        .sd {
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            position: absolute;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-<div class="container">
+<div id="container">
+    <div id="m_content">
 
+    </div>
 </div>
-<div id="tool">
-    <button class="btn btn-default" onclick="addDiv()">div</button>
+<div id="toolset">
+    <!--<button class="btn btn-default" onclick="addDiv()">div</button>-->
 </div>
 <script src="lib/jquery-{{JQUERY_VERSION}}.min.js"></script>
 <script src="lib/bootstrap/bootstrap.min.js"></script>
 <script src="js/main.min.js?v={{MAIN_VERSION}}"></script>
 <script>
     function addDiv() {
-        $(".container").append('<div>test</div>');
+        $(".container").append('<div class="sd">test</div>');
+        $('.sd').mousemove(function (e) {
+            console.log(e.clientX)
+        });
     }
 </script>
 </body>
