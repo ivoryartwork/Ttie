@@ -23,12 +23,24 @@
     </style>
 </head>
 <body>
+<!--组件列表-->
+<div id="component_panel">
+    <ul>
+        <li><a id="component_label">推荐一</a></li>
+        <li><a>推荐二</a></li>
+        <li><a>推荐三</a></li>
+    </ul>
+</div>
 <div id="container">
     <div id="m_content">
-
+        <!--<t-label contenteditable="true">单击此处添加文字</t-label>-->
     </div>
 </div>
-<div id="toolset">
+<div id="property_panel">
+    <div class="pp-position">
+        X:<input type="text" class="x">
+        Y:<input type="text" class="y">
+    </div>
     <!--<button class="btn btn-default" onclick="addDiv()">div</button>-->
 </div>
 <script src="lib/jquery-{{JQUERY_VERSION}}.min.js"></script>
@@ -41,6 +53,9 @@
             console.log(e.clientX)
         });
     }
+
+    window.tlabel.init();
+    window.pp.tposition();
 </script>
 </body>
 </html>

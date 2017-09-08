@@ -1,0 +1,17 @@
+t-label {
+    width: 200px;
+    height: 30px;
+    border: 1px dashed #969696;
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    color: #666666;
+}
+
+t-label[class='active'] {
+    border: none;
+    color: black;
+}
+
+
