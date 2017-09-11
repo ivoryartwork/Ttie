@@ -1,7 +1,15 @@
 #component_panel ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 #component_panel ul li {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+}
 
+#component_panel ul li.active {
+    background-color: #F0F0F0;
 }

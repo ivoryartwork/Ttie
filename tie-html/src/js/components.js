@@ -38,6 +38,7 @@ TLabel.prototype.positionX = function (x) {
     ele.css({
         'left': x + 'px'
     });
+    this.x = x;
 };
 
 TLabel.prototype.positionY = function (y) {
@@ -45,4 +46,13 @@ TLabel.prototype.positionY = function (y) {
     ele.css({
         'top': y + 'px'
     });
+    this.y = y;
+};
+
+TLabel.prototype.content = function () {
+    return $('#' + this.id).html();
+};
+
+TLabel.prototype.destroy = function () {
+    $(this).remove();
 };

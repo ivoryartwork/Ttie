@@ -2,14 +2,20 @@ html, body {
     height: 100%;
 }
 
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: red;
+}
+
 #component_panel {
-    height: 100%;
+    height: calc(100% - 80px);
     width: 20%;
     float: left;
 }
 
 #container {
-    height: 100%;
+    height: calc(100% - 80px);
     width: 60%;
     float: left;
 }
@@ -21,7 +27,7 @@ html, body {
 }
 
 #property_panel {
-    height: 100%;
+    height: calc(100% - 80px);
     width: 20%;
     float: left;
 }
