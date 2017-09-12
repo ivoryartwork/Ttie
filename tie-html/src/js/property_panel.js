@@ -17,16 +17,12 @@
     pp.tposition = function () {
         $('.pp-position .x').bind('input propertychange', function () {
             var x = $(this).val();
-            activeObject.css({
-                'left': x + 'px'
-            });
+            activeObject.positionX(x);
         });
 
         $('.pp-position .y').bind('input propertychange', function () {
             var y = $(this).val();
-            activeObject.css({
-                'top': y + 'px'
-            });
+            activeObject.positionY(y);
         });
         //限制只能输入数字
     };

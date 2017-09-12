@@ -13,7 +13,11 @@ TContainer.curr_page = 0;
 TContainer.createTLabel = function () {
     var label = new TLabel();
     var page = this.hook[this.curr_page];
-    page.append({
+    if (window.utils.isUndefined(page)) {
+        page = [];
+        this.hook[this.curr_page] = page;
+    }
+    page.push({
         type: 'label',
         id: label.id,
         text: label.text,
@@ -22,6 +26,8 @@ TContainer.createTLabel = function () {
         y: label.y,
         zIndex: 0 //默认堆叠顺序
     });
+
+    window.pp.activateObject(label);
 };
 
 TContainer.prePage = function () {

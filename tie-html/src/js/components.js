@@ -5,7 +5,8 @@
  */
 
 TLabel = function () {
-    this.id = 'test';
+    var source = this;
+    this.id = 'tlable_' + new Date().getTime();
     this.text = '<t-label contenteditable="true" id="' + this.id + '">单击此处添加文字</t-label>';
     $('#m_content').append(this.text);
 
@@ -16,7 +17,7 @@ TLabel = function () {
             $(this).html('');
         }
         //用户点击时，激活其属性编辑面板
-        window.pp.activateObject(ele);
+        window.pp.activateObject(source);
     });
 
     ele.blur(function () {
@@ -31,7 +32,6 @@ TLabel = function () {
         }
     });
 };
-
 
 TLabel.prototype.positionX = function (x) {
     var ele = $('#' + this.id);
